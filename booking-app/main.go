@@ -7,5 +7,5 @@ import "fmt"
 // The "main" function is the entrypoint of a Go Program
 
 func main() {
-	fmt.Print("Hello World")
+	fmt.Println("Hello World")
 }
