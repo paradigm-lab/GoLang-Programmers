@@ -58,7 +58,9 @@ func main() {
 		-> Type Inference: BUT, Go can infer the type when you assign a value using the assignment operator	   	
 	*/
 
-	var userName string
+	var firstName string
+	var lastName string
+	var email string
 	var userTickets int
 
 	/*
@@ -67,7 +69,18 @@ func main() {
 	*/
 
 	// Ask user for their name 
-	fmt.Scan(&userName)
+	fmt.Println("Enter your firstName: ")
+	fmt.Scan(&firstName)
 
-	fmt.Printf("User %v booked %v tickets. \n", userName, userTickets)
+	fmt.Println("Enter your lastName: ")
+	fmt.Scan(&lastName)
+	
+	fmt.Println("Enter your email address: ")
+	fmt.Scan(&email)
+
+	fmt.Println("Enter your userTickets: ")
+	fmt.Scan(&userTickets)
+
+	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
+	
 }
