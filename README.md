@@ -48,3 +48,12 @@ Characterstics of Go:
 	-> Consistent across different OS
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Learning Wheels:
+go mod init<module path>
+-> Creates a new module
+-> Module path can correspond to a repository you plan to publish your module to (eg: github.com/paradigm-lab/booking-app)
+	-> Initialized a go.mod file
+	-> Describes the module: with name/module path and go version used in the program
