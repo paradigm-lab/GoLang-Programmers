@@ -61,11 +61,13 @@ func main() {
 	var userName string
 	var userTickets int
 
-	// Ask user for their name 
-	fmt.Scan(userName)
+	/*
+		 A pointer is a variable that point to them memory address of another variable
+		 A pointer is also known as A Special variable
+	*/
 
-	userName = "Tom"
-	userTickets = 2
+	// Ask user for their name 
+	fmt.Scan(&userName)
 
 	fmt.Printf("User %v booked %v tickets. \n", userName, userTickets)
 }
