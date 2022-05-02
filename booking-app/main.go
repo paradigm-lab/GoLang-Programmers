@@ -61,7 +61,7 @@ func main() {
 	var firstName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
 
 	/*
 		 A pointer is a variable that point to them memory address of another variable
@@ -81,6 +81,10 @@ func main() {
 	fmt.Println("Enter your userTickets: ")
 	fmt.Scan(&userTickets)
 
+	// Calculation in go should be done with the same type
+	// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
+	remainingTickets = remainingTickets - userTickets
+
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
-	
+	fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
 }
