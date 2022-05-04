@@ -37,6 +37,12 @@ func main() {
 	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend.")
 
+	
+	// Data structure to store collection of elements in a single variable
+	// Using Arrays and slices
+	// Arrays in Go have got the Fixed size (size = how many elements the array can hold) and data type or (type)
+	var bookings [50]string
+
 	/* 
 	   Data Types:
 		-> In any Programming language you have multiple data types
@@ -84,6 +90,12 @@ func main() {
 	// Calculation in go should be done with the same type
 	// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
 	remainingTickets = remainingTickets - userTickets
+	bookings[0] = firstName + " " + lastName
+
+	fmt.Printf("The whole array: %v \n", bookings)
+	fmt.Printf("The first value: %v \n", bookings[0])
+	fmt.Printf("Array type: %T \n", bookings)
+	fmt.Printf("Array length: %v \n", len(bookings))
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
 	fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
