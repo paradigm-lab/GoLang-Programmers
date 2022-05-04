@@ -1,7 +1,10 @@
 package main
 
 // Formart package or fmt
-import "fmt" 
+import (
+	"fmt" 
+	"strings"
+)
 
 // Where to start the program? Where is the entrypoint
 // The "main" function is the entrypoint of a Go Program
@@ -110,16 +113,29 @@ func main() {
 		fmt.Printf("Array type: %T \n", bookings)
 		fmt.Printf("Array length: %v \n", len(bookings))
 		*/
-
+		
+		/*
 		fmt.Printf("The whole array: %v \n", bookings)
 		fmt.Printf("The first value: %v \n", bookings[0])
 		fmt.Printf("Slice type: %T \n", bookings)
 		fmt.Printf("Slice length: %v \n", len(bookings))
+		*/
 		
 		fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
 		fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
+		
+		firstNames := []string{}
 
-		fmt.Printf("These are all our bookings: %v \n", bookings)
+		// Range iterates over elements for different data structure (so not only arrys and slices)
+		// Blank Identifier _ 
+		for _, booking := range bookings {
+			// strings.Fields() Splits the strings with white space as separator and returns a slice with the split element
+			var names = strings.Fields(booking)
+			var firstName = names[0]
+			firstNames = append(firstNames, firstName)
+		}
+
+		fmt.Printf("The first names of bookings are: %v \n", firstNames)
 	}
 
 }
