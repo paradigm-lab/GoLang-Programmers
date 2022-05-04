@@ -41,7 +41,7 @@ func main() {
 	// Data structure to store collection of elements in a single variable
 	// Using Arrays and slices
 	// Arrays in Go have got the Fixed size (size = how many elements the array can hold) and data type or (type)
-	// var bookings [50]string
+	// var bookings = [50]string {}
 
 
 	// A list that is more dynamic in size 
@@ -116,4 +116,6 @@ func main() {
 	
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
 	fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
+
+	fmt.Printf("These are all our bookings: %v \n", bookings)
 }
