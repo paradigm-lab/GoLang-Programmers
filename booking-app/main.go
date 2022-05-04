@@ -105,7 +105,8 @@ func main() {
 		// Logic to test for the user input if it's greater than then remainingTickets
 		if userTickets > remainingTickets {
 			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets \n", remainingTickets, userTickets)
-			break
+			// continue statement causes loop to skep the remainder of its body and immediately retesting its condition (in our infinite loop our condition is always true)
+			continue
 		}
 
 		// Calculation in go should be done with the same type
