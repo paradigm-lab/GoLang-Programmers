@@ -101,6 +101,13 @@ func main() {
 		fmt.Println("Enter your userTickets: ")
 		fmt.Scan(&userTickets)
 
+
+		// Logic to test for the user input if it's greater than then remainingTickets
+		if userTickets > remainingTickets {
+			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets \n", remainingTickets, userTickets)
+			break
+		}
+
 		// Calculation in go should be done with the same type
 		// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
 		remainingTickets = remainingTickets - userTickets
