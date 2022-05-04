@@ -113,7 +113,10 @@ func main() {
 		// Ticket Validation (Needs to enter correct number of ticket positive + greater than 0)
 		isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets 
 
-		// City input
+
+		// City input using the switch statementa using the multiple value to execute same logic
+
+
 
 		// Logic to test for the user input if it's greater than then remainingTickets
 		if isValidName && isValidEmail && isValidTicketNumber {   
