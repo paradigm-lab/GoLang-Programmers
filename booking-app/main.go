@@ -73,49 +73,53 @@ func main() {
 		-> Type Inference: BUT, Go can infer the type when you assign a value using the assignment operator	   	
 	*/
 
-	var firstName string
-	var lastName string
-	var email string
-	var userTickets uint
+	for {
+		
+		var firstName string
+		var lastName string
+		var email string
+		var userTickets uint
 
-	/*
-		 A pointer is a variable that point to them memory address of another variable
-		 A pointer is also known as A Special variable
-	*/
+		/*
+			 A pointer is a variable that point to them memory address of another variable
+			 A pointer is also known as A Special variable
+		*/
 
-	// Ask user for their name 
-	fmt.Println("Enter your firstName: ")
-	fmt.Scan(&firstName)
+		// Ask user for their name 
+		fmt.Println("Enter your firstName: ")
+		fmt.Scan(&firstName)
 
-	fmt.Println("Enter your lastName: ")
-	fmt.Scan(&lastName)
-	
-	fmt.Println("Enter your email address: ")
-	fmt.Scan(&email)
+		fmt.Println("Enter your lastName: ")
+		fmt.Scan(&lastName)
+		
+		fmt.Println("Enter your email address: ")
+		fmt.Scan(&email)
 
-	fmt.Println("Enter your userTickets: ")
-	fmt.Scan(&userTickets)
+		fmt.Println("Enter your userTickets: ")
+		fmt.Scan(&userTickets)
 
-	// Calculation in go should be done with the same type
-	// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
-	remainingTickets = remainingTickets - userTickets
-	// bookings[0] = firstName + " " + lastName
-	bookings = append(bookings, firstName + " " + lastName)	
+		// Calculation in go should be done with the same type
+		// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
+		remainingTickets = remainingTickets - userTickets
+		// bookings[0] = firstName + " " + lastName
+		bookings = append(bookings, firstName + " " + lastName)	
 
-	/*
-	fmt.Printf("The whole array: %v \n", bookings)
-	fmt.Printf("The first value: %v \n", bookings[0])
-	fmt.Printf("Array type: %T \n", bookings)
-	fmt.Printf("Array length: %v \n", len(bookings))
-	*/
+		/*
+		fmt.Printf("The whole array: %v \n", bookings)
+		fmt.Printf("The first value: %v \n", bookings[0])
+		fmt.Printf("Array type: %T \n", bookings)
+		fmt.Printf("Array length: %v \n", len(bookings))
+		*/
 
-	fmt.Printf("The whole array: %v \n", bookings)
-	fmt.Printf("The first value: %v \n", bookings[0])
-	fmt.Printf("Slice type: %T \n", bookings)
-	fmt.Printf("Slice length: %v \n", len(bookings))
-	
-	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
-	fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
+		fmt.Printf("The whole array: %v \n", bookings)
+		fmt.Printf("The first value: %v \n", bookings[0])
+		fmt.Printf("Slice type: %T \n", bookings)
+		fmt.Printf("Slice length: %v \n", len(bookings))
+		
+		fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
+		fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
 
-	fmt.Printf("These are all our bookings: %v \n", bookings)
+		fmt.Printf("These are all our bookings: %v \n", bookings)
+	}
+
 }
