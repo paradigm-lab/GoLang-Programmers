@@ -136,6 +136,15 @@ func main() {
 		}
 
 		fmt.Printf("The first names of bookings are: %v \n", firstNames)
+		
+		var noTicketsRemaining bool = remainingTickets == 0 
+
+		if noTicketsRemaining { 
+			// end program
+			fmt.Println("OUr conference is booked out. Come back next yeare.")
+			break
+		}
+
 	}
 
 }
