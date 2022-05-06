@@ -20,7 +20,7 @@ func main() {
 	bookings :=  []string{}
 
 	// Function calling 
-	greetUsers(conferenceName, conferenceTickets, remainingTickets)
+	greetUsers(conferenceName)
 	
 	// Arrays	
 	// var bookings = [50]string {}
@@ -69,41 +69,21 @@ func main() {
 
 		// Logic to test for the user input if it's greater than then remainingTickets
 		if isValidName && isValidEmail && isValidTicketNumber {   
+		
 			// Calculation in go should be done with the same type
 			// To handle this issue is to convert one of them to the other type using the builtIn function that are available in the language
 			remainingTickets = remainingTickets - userTickets
 			// bookings[0] = firstName + " " + lastName
 			bookings = append(bookings, firstName + " " + lastName)	
 
-			/*
-			fmt.Printf("The whole array: %v \n", bookings)
-			fmt.Printf("The first value: %v \n", bookings[0])
-			fmt.Printf("Array type: %T \n", bookings)
-			fmt.Printf("Array length: %v \n", len(bookings))
-			*/
-			
-			/*
-			fmt.Printf("The whole array: %v \n", bookings)
-			fmt.Printf("The first value: %v \n", bookings[0])
-			fmt.Printf("Slice type: %T \n", bookings)
-			fmt.Printf("Slice length: %v \n", len(bookings))
-			*/
 			
 			fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
 			fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
 			
 			firstNames := []string{}
 
-			// Range iterates over elements for different data structure (so not only arrys and slices)
-			// Blank Identifier _ 
-			for _, booking := range bookings {
-				// strings.Fields() Splits the strings with white space as separator and returns a slice with the split element
-				var names = strings.Fields(booking)
-				var firstName = names[0]
-				firstNames = append(firstNames, firstName)
-			}
-
-			fmt.Printf("The first names of bookings are: %v \n", firstNames)
+			// Call function to print first names
+			printFirstNames(bookings)
 			
 			var noTicketsRemaining bool = remainingTickets == 0 
 
@@ -136,11 +116,23 @@ func main() {
 
 
 
-func greetUsers(confName string, conferenceTickets int, remainingTickets uint) {
+func greetUsers(confName string, confTickets int, remainingTickets uint) {
 	fmt.Printf("Welcome to %v booking application \n", confName);
 	// fmt.Printf("ConferenceTickets is %T, remainingTickets is %T, conferenceName is %T \n", conferenceTickets, remainingTickets, conferenceName)
 	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend.")
 }
 
+func printFirstNames(bookings []string) {
+	
+	// Range iterates over elements for different data structure (so not only arrys and slices)
+	// Blank Identifier _ 
+	for _, booking := range bookings {
+		// strings.Fields() Splits the strings with white space as separator and returns a slice with the split element
+		var names = strings.Fields(booking)
+		var firstName = names[0]
+		firstNames = append(firstNames, firstName)
+	}
 
+	fmt.Printf("The first names of bookings are: %v \n", firstNames)
+}
