@@ -20,7 +20,7 @@ func main() {
 	bookings :=  []string{}
 
 	// Function calling 
-	greetUsers(conferenceName)
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
 	
 	// Arrays	
 	// var bookings = [50]string {}
@@ -80,8 +80,6 @@ func main() {
 			fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v \n", firstName, lastName, userTickets, email) 	
 			fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
 			
-			firstNames := []string{}
-
 			// Call function to print first names
 			printFirstNames(bookings)
 			
@@ -116,7 +114,7 @@ func main() {
 
 
 
-func greetUsers(confName string, confTickets int, remainingTickets uint) {
+func greetUsers(confName string, conferenceTickets int, remainingTickets uint) {
 	fmt.Printf("Welcome to %v booking application \n", confName);
 	// fmt.Printf("ConferenceTickets is %T, remainingTickets is %T, conferenceName is %T \n", conferenceTickets, remainingTickets, conferenceName)
 	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
@@ -127,6 +125,7 @@ func printFirstNames(bookings []string) {
 	
 	// Range iterates over elements for different data structure (so not only arrys and slices)
 	// Blank Identifier _ 
+	firstNames := []string{}
 	for _, booking := range bookings {
 		// strings.Fields() Splits the strings with white space as separator and returns a slice with the split element
 		var names = strings.Fields(booking)

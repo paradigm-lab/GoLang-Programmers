@@ -59,3 +59,5 @@ Functions:
 -> You can call a function as many times you want
 -> So a function is also used to reduce code duplication
 
+Function Parameters
+-> Information can be passed into functions as parameters
