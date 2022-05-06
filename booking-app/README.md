@@ -75,3 +75,7 @@ Local Variables
 -> Defined inside a function or a block 
 -> They can be accessed only inside that function or block of code
 
+More use Cases of Functions:
+-> Group logic that belongs together 
+-> Reuse logic and so reducing duplication of code
+
