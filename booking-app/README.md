@@ -64,3 +64,14 @@ Function Parameters
 
 Returning multiple values
 -> A Go function can return multiple values
+
+
+Package Level Variables
+-> Defined at the top outside all functions
+-> They can be accessed inside any of the functions
+-> And in all files, which are in the same package
+
+Local Variables
+-> Defined inside a function or a block 
+-> They can be accessed only inside that function or block of code
+
