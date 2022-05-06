@@ -17,19 +17,13 @@ func main() {
 
 	var remainingTickets uint = 50	
 
-	// Printing the Type for the variables Using the %T for the Type
-	fmt.Printf("ConferenceTickets is %T, remainingTickets is %T, conferenceName is %T \n", conferenceTickets, remainingTickets, conferenceName)
+	bookings :=  []string{}
 
-	fmt.Printf("Welcome to %v booking application. \n", conferenceName)
-	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
-	fmt.Println("Get your tickets here to attend.")
-
+	// Function calling 
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
 	
-	
+	// Arrays	
 	// var bookings = [50]string {}
-
-
-	var bookings []string
 
 	for {
 		
@@ -139,3 +133,14 @@ func main() {
 	}
 
 }
+
+
+
+func greetUsers(confName string, conferenceTickets int, remainingTickets uint) {
+	fmt.Printf("Welcome to %v booking application \n", confName);
+	// fmt.Printf("ConferenceTickets is %T, remainingTickets is %T, conferenceName is %T \n", conferenceTickets, remainingTickets, conferenceName)
+	fmt.Printf("We have total of %v tickets and %v are still available \n", conferenceTickets, remainingTickets)
+	fmt.Println("Get your tickets here to attend.")
+}
+
+
