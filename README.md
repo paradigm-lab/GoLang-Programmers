@@ -57,3 +57,9 @@ go mod init<module path>
 -> Module path can correspond to a repository you plan to publish your module to (eg: github.com/paradigm-lab/booking-app)
 	-> Initialized a go.mod file
 	-> Describes the module: with name/module path and go version used in the program
+
+
+Packages in Go 
+-> Go programs are organized into packages
+-> A package is a collection of Go files
+-> 
