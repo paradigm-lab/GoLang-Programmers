@@ -81,7 +81,9 @@ func main() {
 			fmt.Printf("%v ticket remaining for %v \n", remainingTickets, conferenceName)	
 			
 			// Call function to print first names
-			printFirstNames(bookings)
+			firstNames := getFirstNames(bookings)
+			fmt.Printf("The first names of bookings are: %v \n", firstNames)
+
 			
 			var noTicketsRemaining bool = remainingTickets == 0 
 
@@ -121,7 +123,8 @@ func greetUsers(confName string, conferenceTickets int, remainingTickets uint) {
 	fmt.Println("Get your tickets here to attend.")
 }
 
-func printFirstNames(bookings []string) {
+
+func getFirstNames(bookings []string) []string {
 	
 	// Range iterates over elements for different data structure (so not only arrys and slices)
 	// Blank Identifier _ 
@@ -133,5 +136,5 @@ func printFirstNames(bookings []string) {
 		firstNames = append(firstNames, firstName)
 	}
 
-	fmt.Printf("The first names of bookings are: %v \n", firstNames)
+	return firstNames
 }
