@@ -51,20 +51,7 @@ func main() {
 		fmt.Scan(&userTickets)
 
 
-		// Validation
-		// Logical Operators: &&, ||, !=
-		// First Name and Last Name validation
-		isValidName := len(firstName) >= 2 &&  len(lastName) >= 2
-
-		// Email validation
-		isValidEmail := strings.Contains(email, "@")
-		
-		// Ticket Validation (Needs to enter correct number of ticket positive + greater than 0)
-		isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets 
-
-
-		// City input using the switch statementa using the multiple value to execute same logic
-
+		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 
 
 		// Logic to test for the user input if it's greater than then remainingTickets
@@ -138,3 +125,23 @@ func getFirstNames(bookings []string) []string {
 
 	return firstNames
 }
+
+
+func validateUserInput(firstName string, lastName string, email string, userTickets uint, remainingTickets uint) (bool, bool, bool) {
+	// Validation
+	// Logical Operators: &&, ||, !=
+	// First Name and Last Name validation
+	isValidName := len(firstName) >= 2 &&  len(lastName) >= 2
+
+	// Email validation
+	isValidEmail := strings.Contains(email, "@")
+
+	// Ticket Validation (Needs to enter correct number of ticket positive + greater than 0)
+	isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets 
+	
+	return isValidName, isValidEmail, isValidTicketNumber
+
+	// City input using the switch statementa using the multiple value to execute same logic
+}
+
+

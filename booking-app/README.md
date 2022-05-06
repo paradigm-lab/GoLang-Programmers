@@ -61,3 +61,6 @@ Functions:
 
 Function Parameters
 -> Information can be passed into functions as parameters
+
+Returning multiple values
+-> A Go function can return multiple values
