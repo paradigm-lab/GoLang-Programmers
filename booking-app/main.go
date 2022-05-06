@@ -8,23 +8,7 @@ import (
 
 // Where to start the program? Where is the entrypoint
 // The "main" function is the entrypoint of a Go Program
-
 func main() {
-	/*
-	 Variables are used to store values
-	 Like containers for values 
-	 Give the variable a name and reference everywhere in the app
-	 Variable names should be descriptive
-	*/
-
-	/* 
-	 "Syntactic Sugar" in Programming
-		-> A term to describe a feature in a language that let's you do samething more easily
-		-> Makes the language "sweeter for human use
-		-> But doesn't add any new functionality that it didn't already have
-
-	 We can not use := with constants
-	*/
 
 	conferenceName := "Go Conference"
 
@@ -41,40 +25,11 @@ func main() {
 	fmt.Println("Get your tickets here to attend.")
 
 	
-	// Data structure to store collection of elements in a single variable
-	// Using Arrays and slices
-	// Arrays in Go have got the Fixed size (size = how many elements the array can hold) and data type or (type)
+	
 	// var bookings = [50]string {}
 
 
-	// A list that is more dynamic in size 
-	// Slice is an abstraction of an Array
-	// Slice are more flexible and powerfull:
-	// Variable-length or get an sub-array of its own
-	// Slices are also index-based and have a size, but is resized when needed
-	 var bookings []string
-
-
-	/* 
-	   Data Types:
-		-> In any Programming language you have multiple data types
-		-> Difference: which data types do they support exactly?
-	
-	   String -> For textual data, defined with double quotes, eg: "This is a String"
-	
-	   Integers -> Representing whole number, positive and negative, eg: 5, 120, -20
-		    -> There are many more numeric data types!
-			Different Integer Types and Different Floating Types
-		
-	   -> Each data type can do different things and behaves differently
-
-	   Go is a statically typed language
-		-> You need to tell Go Compiler, the data type when declaring the variable
-			-> More Robust, Reduce the likelihood of errors
-			-> Helps developers to catch type mismatches sooner (at compile time)
-
-		-> Type Inference: BUT, Go can infer the type when you assign a value using the assignment operator	   	
-	*/
+	var bookings []string
 
 	for {
 		
@@ -163,7 +118,8 @@ func main() {
 				fmt.Println("OUr conference is booked out. Come back next yeare.")
 				break
 			}
-		} else {
+
+		}  else {
 			if !isValidName {
 				fmt.Println("First name or last name you entered is too short")
 			}
