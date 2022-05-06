@@ -26,30 +26,8 @@ func main() {
 	// var bookings = [50]string {}
 
 	for {
-		
-		var firstName string
-		var lastName string
-		var email string
-		var userTickets uint
-
-		/*
-			 A pointer is a variable that point to them memory address of another variable
-			 A pointer is also known as A Special variable
-		*/
-
-		// Ask user for their name 
-		fmt.Println("Enter your firstName: ")
-		fmt.Scan(&firstName)
-
-		fmt.Println("Enter your lastName: ")
-		fmt.Scan(&lastName)
-		
-		fmt.Println("Enter your email address: ")
-		fmt.Scan(&email)
-
-		fmt.Println("Enter your userTickets: ")
-		fmt.Scan(&userTickets)
-
+	
+		firstName, lastName, email, userTickets := getUserInput()
 
 		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 
@@ -144,4 +122,29 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 	// City input using the switch statementa using the multiple value to execute same logic
 }
 
+func getUserInput() (string, string, string, uint) {
+	var firstName string
+	var lastName string
+	var email string
+	var userTickets uint
 
+	/*
+		 A pointer is a variable that point to them memory address of another variable
+		 A pointer is also known as A Special variable
+	*/
+
+	// Ask user for their name 
+	fmt.Println("Enter your firstName: ")
+	fmt.Scan(&firstName)
+
+	fmt.Println("Enter your lastName: ")
+	fmt.Scan(&lastName)
+
+	fmt.Println("Enter your email address: ")
+	fmt.Scan(&email)
+
+	fmt.Println("Enter your userTickets: ")
+	fmt.Scan(&userTickets)
+
+	return firstName, lastName, email, userTickets
+}
