@@ -54,3 +54,8 @@ Functions:
 -> Like variable name, you should give a function a descriptive name
 -> Call the function by its name, whenever you want to execute this block of code
 -> Every program has at least one function, which is the main() function 
+
+-> Function is only executed, when "called"!
+-> You can call a function as many times you want
+-> So a function is also used to reduce code duplication
+
