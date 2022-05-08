@@ -73,4 +73,8 @@ go mod init<module path>
 Packages in Go 
 -> Go programs are organized into packages
 -> A package is a collection of Go files
--> 
+
+
+go run
+go build 
+go install
