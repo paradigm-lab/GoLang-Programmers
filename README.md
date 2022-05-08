@@ -1,4 +1,4 @@
--> Programming language developed at Google in 2007
+-> Programming language developed at Google in 2007 by: Robert Griesemar, Rob Pike, Ken Thompson(UNIX)
 -> Open-sourced in 2009
 
 Why Go? Go use Cases
@@ -47,6 +47,16 @@ Characterstics of Go:
 	-> Compiles into single binary (Machine code)
 	-> Consistent across different OS
 
+-> Strong and Statically typed
+
+-> Excellent Community
+
+-> key features
+	* Simplicity
+	* Fast compile times
+	* Garbage collected
+	* Built-in concurrency
+	* Compile to standalone binaries
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
