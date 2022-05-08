@@ -62,7 +62,7 @@ For more Info visit: golang.org
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Learning Wheels:
+### Learning Wheels:
 go mod init<module path>
 -> Creates a new module
 -> Module path can correspond to a repository you plan to publish your module to (eg: github.com/paradigm-lab/booking-app)
@@ -78,3 +78,39 @@ Packages in Go
 go run
 go build 
 go install
+
+
+Variables:
+- Variable declaration and Initialization
+	* var foo int
+	* var foo int = 42
+	* foo := 32 (Syntactic Sugar)
+	
+	- Package Level Variables:
+		* Defined at the top outside all functions
+		* They can be accessed inside any of the functions
+		* And in all files, which are in the same package
+
+	- Local Variables:
+		* Defined inside a function or a block function
+		* They can be accessed only inside that function or block of code
+
+- Redeclaration and shadowing
+	* Can't redeclare variables, but can shadow then 
+	* All variables must be used
+
+- Visibility
+	* Lower case first letter for package scope
+	* Upper case first letter export globally 
+	* no private scope (Scoping the variable into a block but declaring it in the scope)
+
+- Naming conventions
+	* Pascal or camelCase
+	* Capitalize acronyms(HTTP, URL)
+	* As short as reasonable
+	* Longer names for longer lives
+
+- Type convertions
+	* destinationType(variable)
+	* No implicity type conversion (Due to the possibility of losing the information eg: float to int)
+	* Use strconv package for strings
