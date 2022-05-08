@@ -58,6 +58,7 @@ Characterstics of Go:
 	* Built-in concurrency
 	* Compile to standalone binaries
 
+For more Info visit: golang.org
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
