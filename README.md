@@ -182,5 +182,10 @@ Primitives:
 			* eg: strings.Reader#ReadRune
 
 
-
+- Constants
+	* Naming convention	
+	* Typed constants
+	* untyped constants
+	* Enumerated constants
+	* Enumerated expressions
 
