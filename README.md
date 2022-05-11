@@ -114,3 +114,73 @@ Variables:
 	* destinationType(variable)
 	* No implicity type conversion (Due to the possibility of losing the information eg: float to int)
 	* Use strconv package for strings
+
+
+Primitives:
+- Boolean Type
+	* Values are true or false
+	* Not an alias for other types(e.g int)
+	* Zero values is false
+	* Example: var n bool = false	
+		   var n bool (By default it will be zero(0) which means false)
+
+- Numeric Type
+	* Integers
+		* int() function
+		
+		* Signed Integers (int8, int16, int32, int64) -> int
+		* int type has varying size, but min 32 bits
+		* 8 bit(int8) through 64bit(int64)
+		
+		* Unsigned Inegers (uint8, uint16, uint32, NO uint64 but we have a byte aliase to represent uint8) -> uint (Positive numbers)
+		* 8bit(byte and uint8) through 32 bit(uint32)
+
+		* Arithmetic operations (
+		* Bitwise Operations (
+		* Zero value is 0 (Default in memory)
+		* Can't mix types in same family!(uint16 + uint32 = error) 
+
+
+	* Floating Point 
+		* Follow IEEE-754 Standard (32 and 64 bits floating point numbers)
+		* float32 +-1.18E-38 -> +-3.4E38
+		* float64 +-2.23E-308 -> +-1.8E308 (Default)
+		* float() function
+		* Zero value is 0 
+		* 32 and 64 bit versions
+		* Literal styles
+			* Decimal (3.14)
+			* Exponential (13e18 or 2E10)
+			* Mixed (13.7e12)
+		* Arithmetic operations
+			* Addition, Subtraction, multiplication and division
+		* No bitwise operators, No remainder operators, No bit Shifting operators 
+	
+	* Complex numbers
+		* Zero value is (0+0i)
+		* 64 and 128 bit versions
+		* complex64 and complex128
+		* Built-in functions	
+			* complex - make complex number from two floats
+			* real - get real part as float
+			* imag - get imaginary part as float
+		* Arithmetic operations
+			* Addition, Subtraction, multiplication and division
+
+- Text types
+	* Strings
+		* UTF-8
+		* Strings in Go are aliases for the bits
+		* Strings are immutable
+		* Can be concatenated with plus (+) oparator
+		* Can be converted to []byte
+	
+	* Rune
+		* UTF-32
+		* Alias for int32
+		* Special methods normally required to process
+			* eg: strings.Reader#ReadRune
+
+
+
+
