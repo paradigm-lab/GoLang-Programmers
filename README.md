@@ -183,9 +183,30 @@ Primitives:
 
 
 - Constants
+	- Immutable, but can be shadowed
+	- Replaced by the compiler at compile time
+		* Value must be calculatable at compile time
+
 	* Naming convention	
+		* PascalCase for exported constants
+		* camelCase for internal constants  
+
 	* Typed constants
+		* Work like immutable variables
+		* Can interoperate only with same type
+
 	* untyped constants
+		* Work like literals
+		* Can interoperate with similar types
+
 	* Enumerated constants
+		* Special symbol iota allows related constants to be created easily
+		* Iota starts at 0 in each const block and increments by one
+		* Watch out of constant values that match zero values for variables
+
 	* Enumerated expressions
+		* Operations that can be determined at compile time are allowed
+			* Arithmetic
+			* Bitwise operations
+			* Bitshifting
 
