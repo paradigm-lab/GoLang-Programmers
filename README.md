@@ -210,3 +210,13 @@ Primitives:
 			* Bitwise operations
 			* Bitshifting
 
+- Arrays and Slices
+	* Arrays 	
+		- Creation
+		- Built-in Functions
+		- Working with arrays
+	
+	* Slices 
+		- Creation 
+		- Built-in Functions
+		- Working with slices
