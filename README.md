@@ -232,8 +232,22 @@ Primitives:
 
 	
 	* Slices 
-		- Creation 
-		- Built-in Functions
-		- Working with slices
+		- Backed by array
 
+		- Creation 
+			* Slice existing array or slice 
+			* Literal style
+			* Via make function 
+				- a := make([]int, 10) // Create slice with capacity and length == 10
+				- a := make([]int, 10, 100) // Slice with length == 10 and capacity == 100 
+
+		- Built-in Functions
+			* len function return length of slice
+			* cap function returns length of undelying array
+			* append function to add elements to slice
+				* May cause expensive copy operation if underlying array is too small
+
+		- Working with slices
+			* Copies refer to same underlying array
+			
 
