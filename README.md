@@ -251,3 +251,18 @@ Primitives:
 			* Copies refer to same underlying array
 			
 
+
+- Maps and Structs
+		* Maps
+			- What are they?
+			- Creating 
+			- Manipulation
+
+		* Structs
+			- What are they?
+			- Creating
+			- Naming Conventions
+			- Embedding
+			- Tags	
+
+
