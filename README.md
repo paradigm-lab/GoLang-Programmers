@@ -211,12 +211,29 @@ Primitives:
 			* Bitshifting
 
 - Arrays and Slices
-	* Arrays 	
+	* Arrays
+	        - Collection of items with same type
+		- Fixed Size	
+		
 		- Creation
+			- Declaration Style
+				* a := [3]int{1, 2, 3}
+				* a := [...]int{1, 2, 3}
+				* var a [3]int
+		
+		- Access via zero-based index
+			* a := [3]int {1, 3, 5} // a[1] == 3
+		
 		- Built-in Functions
+			* len function returns size of array
+
 		- Working with arrays
+			* Copies refer to different underlying data 
+
 	
 	* Slices 
 		- Creation 
 		- Built-in Functions
 		- Working with slices
+
+
